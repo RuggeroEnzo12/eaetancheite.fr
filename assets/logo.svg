@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  LOGO PLACEHOLDER — EA Étanchéité
+  ⚠️  Remplace ce fichier par ton vrai logo en .svg ou .png
+  Chemin attendu : /assets/logo.svg
+  Si tu utilises un PNG, renomme la balise <img> dans index.html en assets/logo.png
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="EA Étanchéité">
+  <title>EA Étanchéité</title>
+  <!-- Drop -->
+  <path d="M88 28 C88 28 36 86 36 132 a52 52 0 1 0 104 0 C140 86 88 28 88 28z" fill="#2563B8"/>
+  <ellipse cx="68" cy="110" rx="10" ry="20" fill="#ffffff" fill-opacity="0.35"/>
+  <!-- Orange stripes -->
+  <path d="M120 80 L210 80 L196 100 L106 100 z" fill="#D88B3D" opacity="0.85"/>
+  <path d="M120 110 L210 110 L196 130 L106 130 z" fill="#D88B3D" opacity="0.6"/>
+  <!-- EA text -->
+  <text x="125" y="170" font-family="Arial Black, Helvetica, sans-serif" font-weight="900" font-size="78" fill="#2F3438" letter-spacing="-2">EA</text>
+  <!-- ÉTANCHÉITÉ -->
+  <text x="120" y="210" text-anchor="middle" font-family="Arial Black, Helvetica, sans-serif" font-weight="800" font-size="22" fill="#2F3438" letter-spacing="2">ÉTANCHÉITÉ</text>
+</svg>
