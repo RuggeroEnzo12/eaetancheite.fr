@@ -1856,6 +1856,115 @@ body.modal-open {
   .reveal { opacity: 1; transform: none; }
 }
 
+/* ─── Bannière véhicule — Zone d'intervention ─── */
+.zone-vehicle-banner {
+  margin: 0 0 52px;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, #0f2d6b 0%, #1a4a9e 45%, #2563B8 100%);
+  overflow: hidden;
+  position: relative;
+}
+.zone-vehicle-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 20% 50%, rgba(255,255,255,0.06) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 20%, rgba(216,139,61,0.15) 0%, transparent 50%);
+  pointer-events: none;
+}
+.zone-vehicle-content {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  align-items: center;
+  min-height: 260px;
+}
+.zone-vehicle-text {
+  padding: 40px 32px 40px 44px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  z-index: 2;
+}
+.zone-vehicle-tag {
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #D88B3D;
+}
+.zone-vehicle-headline {
+  font-size: clamp(1.15rem, 2.2vw, 1.6rem);
+  font-weight: 600;
+  color: rgba(255,255,255,0.88);
+  line-height: 1.35;
+  margin: 0;
+}
+.zone-vehicle-headline strong {
+  color: #fff;
+  font-weight: 800;
+  display: block;
+}
+.zone-vehicle-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: #D88B3D;
+  color: #fff;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-decoration: none;
+  width: fit-content;
+  transition: background 0.2s, transform 0.2s;
+  margin-top: 4px;
+}
+.zone-vehicle-cta svg { width: 16px; height: 16px; flex-shrink: 0; }
+.zone-vehicle-cta:hover { background: #c47a2e; transform: translateY(-1px); }
+.zone-vehicle-img-wrap {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 100%;
+  min-height: 220px;
+}
+.zone-vehicle-img-wrap::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0; right: 0;
+  height: 32px;
+  background: linear-gradient(to top, rgba(26,74,158,0.4), transparent);
+  pointer-events: none;
+}
+.zone-vehicle-img-wrap img {
+  width: 100%;
+  max-width: 680px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  filter: drop-shadow(0 8px 24px rgba(0,0,0,0.35));
+  transform: translateY(4px);
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 880px) {
+  .zone-vehicle-content { grid-template-columns: 1fr; min-height: auto; }
+  .zone-vehicle-text { padding: 32px 28px 20px; text-align: center; align-items: center; }
+  .zone-vehicle-img-wrap { min-height: 160px; }
+  .zone-vehicle-img-wrap img { max-width: 100%; padding: 0 16px; }
+}
+@media (max-width: 480px) {
+  .zone-vehicle-banner { border-radius: var(--radius); margin-bottom: 36px; }
+  .zone-vehicle-text { padding: 24px 20px 16px; gap: 12px; }
+  .zone-vehicle-headline { font-size: 1.1rem; }
+  .zone-vehicle-cta { font-size: 0.9rem; padding: 9px 18px; }
+}
+
 /* ─── FAQ locale (pages villes) ─── */
 .city-faq { margin-top: 40px; }
 .city-faq h2 { font-size: 1.35rem; font-weight: 700; color: #1e3a5f; margin-bottom: 18px; }
